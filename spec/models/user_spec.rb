@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @first_user = User.new(name: 'jose1',second_name: 'zepeda', email: 'user1@hotmail.com', password: 123456, password_confirmation: 123456)
+  end
+
+  describe 'When the user model is tested' do
+    it 'validates the name of the object' do
+      
+
+      expect(@first_user.name).to eq 'jose1'
+    end
+  end
 end

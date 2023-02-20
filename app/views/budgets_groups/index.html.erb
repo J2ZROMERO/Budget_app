@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Budgets groups</h1>
+
+<div id="budgets_groups">
+  <% @budgets_groups.each do |budgets_group| %>
+    <%= render budgets_group %>
+    <p>
+      <%= link_to "Show this budgets group", budgets_group %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New budgets group", new_budgets_group_path %>

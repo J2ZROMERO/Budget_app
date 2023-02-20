@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :budgets_groups
   resources :groups
   resources :budgets
   resources :users
