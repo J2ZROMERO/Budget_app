@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
-    @budgets = Budget.all
+    @budgets = Budget.order(created_at: :desc)
   end
 
   # GET /budgets/1 or /budgets/1.json
@@ -20,13 +20,19 @@ class BudgetsController < ApplicationController
   end
 
   # POST /budgets or /budgets.json
-  def create
-    @budget = Budget.new(budget_params)
+ def create
+    @budget = Budget.new(budget_params.merge(user_id: @current_user.id))
 
     respond_to do |format|
       if @budget.save
-        format.html { redirect_to budget_url(@budget), notice: "Budget was successfully created." }
-        format.json { render :show, status: :created, location: @budget }
+        @budget_group = BudgetsGroup.new( budget_params_group.merge(budget_id: @budget.id))
+        if @budget_group.save
+          format.html { redirect_to budget_url(@budget), notice: "Budget was successfully created." }
+          format.json { render :show, status: :created, location: @budget }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @budget_group.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @budget.errors, status: :unprocessable_entity }
@@ -64,7 +70,13 @@ class BudgetsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
+    
+
     def budget_params
-      params.require(:budget).permit(:name, :amount, :author_id, :group_id, :createdAt)
+      params.require(:budget).permit(:name, :amount,:group_id).slice(:name, :amount)
+    end
+    
+    def budget_params_group
+      params.require(:budget).permit(:name, :amount,:group_id).slice(:group_id)
     end
 end

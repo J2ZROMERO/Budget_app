@@ -5,23 +5,15 @@
   </p>
 
   <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
+  <strong>Icon:</strong>
+  <%= image_tag group.icon, size: "100x100" %>
+</p>
 
   <p>
-    <strong>Createdat:</strong>
-    <%= group.createdAt %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= group.author_id %>
-  </p>
-
-  <p>
-    <strong>Budget:</strong>
-    <%= group.budget_id %>
+    <strong>Total Amount:</strong>
+    <% @sum = group.budgets.sum {|p| p.amount}  %>
+    <%= @sum %>
   </p>
 
 </div>
+
