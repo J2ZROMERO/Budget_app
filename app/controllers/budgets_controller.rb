@@ -27,7 +27,7 @@ class BudgetsController < ApplicationController
       if @budget.save
         @budget_group = BudgetsGroup.new( budget_params_group.merge(budget_id: @budget.id))
         if @budget_group.save
-          format.html { redirect_to budget_url(@budget), notice: "Budget was successfully created." }
+          format.html { redirect_to group_budgets_path(params[:group_id]), notice: "Budget was successfully created." }
           format.json { render :show, status: :created, location: @budget }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -58,7 +58,7 @@ class BudgetsController < ApplicationController
     @budget.destroy
 
     respond_to do |format|
-      format.html { redirect_to budgets_url, notice: "Budget was successfully destroyed." }
+      format.html { redirect_to group_budgets_path(params[:group_id]), notice: "Budget was successfully destroyed." }
       format.json { head :no_content }
     end
   end
