@@ -23,7 +23,7 @@
 
   <div>
   <%= form.label :group_id, "Group", style: "display: block" %>
-  <%= form.collection_select :group_id, Group.all, :id, :name %>
+  <%= form.collection_select :group_id, Group.where(id: params[:group_id]), :id, :name %>
   </div>
 
   <div>
