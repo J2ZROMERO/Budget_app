@@ -3,12 +3,12 @@
 <h1>Transactions</h1>
 
 <div id="budgets">
-  <% @budgets.each do |budget| %>
-    <%= render budget %>
+<% @budgets.each do |budget| %>
+  <%= render "budget",budget: budget %>
     <p>
       
     </p>
   <% end %>
 </div>
-
+<%= link_to "Back to budgets", groups_path(params[:group_id]) %>
 <%= link_to "New budget", new_group_budget_path %>

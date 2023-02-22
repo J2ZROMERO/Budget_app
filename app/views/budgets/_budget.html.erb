@@ -1,13 +1,14 @@
 <div id="<%= dom_id budget %>">
   <p>
     <strong>Name:</strong>
-    <%= budget.name %>
+    <%= budget.budget.name %>
   </p>
 
   <p>
     <strong>Amount:</strong>
-    <%= budget.amount %>
+    <%= budget.budget.amount %>
   </p>
+  
 
   <%= button_to "Destroy this budget", group_budget_path(params[:group_id],:id => budget.id), method: :delete %>
 
