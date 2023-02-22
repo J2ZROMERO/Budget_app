@@ -2,11 +2,17 @@
 
 <h1>Transactions</h1>
 
+
+
+<h2>Total Amount </h2><%= @budgets.sum {|p| p.budget.amount}  %>  
+
+
+
 <div id="budgets">
 <% @budgets.each do |budget| %>
   <%= render "budget",budget: budget %>
     <p>
-      
+    <%= budget.budget.amount %>
     </p>
   <% end %>
 </div>

@@ -4,7 +4,7 @@ class BudgetsController < ApplicationController
   # GET /budgets or /budgets.json
   def index
     @budgets = BudgetsGroup.where(group_id: params[:group_id]).order(created_at: :desc)
-
+    
   end
 
   # GET /budgets/1 or /budgets/1.json
