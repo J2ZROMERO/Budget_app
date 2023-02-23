@@ -23,6 +23,7 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
+    @style = 'groups/new'
     @group = Group.new(group_params.merge(user_id: @current_user.id))
 
     respond_to do |format|

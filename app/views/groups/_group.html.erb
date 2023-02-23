@@ -2,8 +2,8 @@
 
 <%= link_to group_budgets_url(group_id: group.id), class: "category_content" do %>
 
-  <div id="<%= dom_id group %>" class="item_horizontal">
-<%= image_tag group.icon, size: "100x100" %>
+  <div  class="item_horizontal">
+<%= image_tag group.icon, class: 'items_category' %>
 
 
 <div class="element_index">
@@ -22,7 +22,7 @@
   <%end%>
 
   <%= button_to group_path(:id =>  group.id), method: :delete, class: "nombre_de_la_clase", style: "background: none; border: none; text-decoration: underline;" do %>
-    <%= image_tag "delete.png", size: "25x25" %>
+    <%= image_tag "delete.png", size: "25x25"  %>
     <% end %>
     
     </div>

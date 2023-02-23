@@ -1,8 +1,7 @@
 
-<section>
+<section class="section_group_index">
 <header class="header_groups_index">
-<h2>
-</h2>
+
 <h3 class="categories_title" >  Categories </h3>
 <h1 class="sign_out">  <%= link_to image_tag("of.png", class: "logout") , destroy_user_session_path, method: :delete %> </h1>
 </header>
@@ -34,7 +33,7 @@
   
   <%= link_to new_group_path do  %> 
 
-  <%= image_tag "add.png", size: "30x30" %>
+  <%= image_tag "add.png",  class: 'boton_add'  ,size: "30x30" %>
     <% end %>
 
   </section>

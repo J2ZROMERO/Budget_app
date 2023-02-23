@@ -37,3 +37,6 @@ display: flex;
 .logo {
     margin-top: 8%;
 }
+p {
+    margin: 0;
+}
