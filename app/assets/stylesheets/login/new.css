@@ -8,11 +8,11 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    height: 535px;
+    min-height: 535px;
     background-color: #f1f3f2;
  }
 
-form#new_user {
+.form_new_login {
     width: 100%;
     display: flex;
     gap: 0px;
@@ -87,4 +87,16 @@ margin-top: 5%;
 a{
     width: 11%;
     margin-left: 2%;
+}
+.notice {
+    text-align: center;
+    width: 100%;
+    color: green;
+    margin-top: 3%;
+}
+ .alert {
+    text-align: center;
+    width: 100%;
+    color: red;
+    margin-top: 3%;
 }

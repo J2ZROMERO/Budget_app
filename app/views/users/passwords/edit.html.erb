@@ -1,27 +1,35 @@
-<section>
-<h2>Change your password</h2>
+<section class="new_reset_confirm">
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+
+  <header class="header_login">
+  
+
+  <%= link_to image_tag("back.png", class: "return_home") ,  new_user_session_path %>
+
+  <h2 class="login_title"> RESET PASS</h2>
+  
+  <div class="actions">
+    <%= f.submit "Confirm" ,class: 'button_send'%>
+  </div>
+  </header>
+
   <%= render "users/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    
+    
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", placeholder: '    Password - 6 minimun characters' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '    Confirm New Password' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
+  
 <% end %>
 
-<%= render "users/shared/links" %>
+
 </section>

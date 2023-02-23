@@ -1,42 +1,47 @@
-<section>
-<h2>Sign up</h2>
+<section class="new_register">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form_new_user"}) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   
-  <div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <header class="header_login">
+  
+
+  <%= link_to image_tag("back.png", class: "return_home") ,  root_path %>
+
+  <h2 class="login_title">REGISTER</h2>
+  <div class="actions_new">
+    <%= f.submit "Next",class: 'button_next' %>
   </div>
-  
+  </header>
+
+
   <div class="field">
-  <%= f.label :second_name %><br />
-  <%= f.text_field :second_name, autofocus: true, autocomplete: "name" %>
-  </div>
-  
-  
-  <div class="field">
-  <%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  
-  <div class="field">
-  <%= f.label :password %>
-  <% if @minimum_password_length %>
-  <em>(<%= @minimum_password_length %> characters minimum)</em>
-  <% end %><br />
-  <%= f.password_field :password, autocomplete: "new-password" %>
+
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: '    Name' %>
   </div>
   
   <div class="field">
-  <%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  
+  <%= f.text_field :second_name, autofocus: true, autocomplete: "name", placeholder: '    Second Name' %>
   </div>
   
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  
+  <div class="field">
+  <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: '    Email' %>
   </div>
+  
+  <div class="field">
+
+  <%= f.password_field :password, autocomplete: "new-password", placeholder: '    Password - 6 characters minimum' %>
+  </div>
+  
+  <div class="field">
+  
+  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '    Password Confirm' %>
+  </div>
+  
+  
 <% end %>
 
 <%= render "users/shared/error_messages", resource: resource %>
-<%= render "users/shared/links" %>
+
 </section>

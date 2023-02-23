@@ -3,7 +3,7 @@
 
 
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form_new_login"}) do |f| %>
 
 
   <header class="header_login">
@@ -40,7 +40,7 @@
   <p class="alert"><%= alert %></p>
   
   <div class="login_links">
-  <%= render "users/shared/links" %>
+  <%= render "users/shared/links_login" %>
   </div>
 <% end %>
 
