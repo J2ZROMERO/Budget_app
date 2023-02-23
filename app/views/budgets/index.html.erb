@@ -1,3 +1,4 @@
+<section>
 <p style="color: green"><%= notice %></p>
 
 <h1>Transactions</h1>
@@ -16,5 +17,6 @@
     </p>
   <% end %>
 </div>
-<%= link_to "Back to budgets", groups_path(params[:group_id]) %>
+<%= link_to image_tag("c.png", class: "logo", style: "width: 100px;") ,  groups_path %>
 <%= link_to "New budget", new_group_budget_path %>
+</section>

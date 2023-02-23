@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
+    @style = 'groups/index'
     @groups =  Group.all
   end
 
@@ -12,6 +13,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/new
   def new
+    @style = 'groups/new'
     @group = Group.new
   end
 

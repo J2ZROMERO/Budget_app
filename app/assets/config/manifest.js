@@ -2,3 +2,12 @@
 //= link_directory ../stylesheets .css
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
+//= link login/new.css
+//= link registration/new.css
+//= link password/new.css
+//= link password/edit.css
+//= link groups/index.css
+//= link groups/show.css
+//= link budgets/index.css
+//= link budgets/new.css
+//= link groups/new.css

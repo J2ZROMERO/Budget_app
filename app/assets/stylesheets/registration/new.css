@@ -1,0 +1,12 @@
+@import "../application.css";
+div#error_explanation {
+    width: 240px;
+}
+div#error_explanation ul {
+    
+    padding: 7%;
+}
+
+input#user_password_confirmation,input#user_name, input#user_second_name{
+    width: 85%;
+}

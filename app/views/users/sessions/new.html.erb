@@ -1,5 +1,7 @@
-<h2>Log in</h2>
-
+<section class="section_new">
+<%= image_tag("logo.png", class: 'logo', size: "100x100") %>
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -22,5 +24,7 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
+<div class="login_links">
 <%= render "users/shared/links" %>
+</div>
+</section>

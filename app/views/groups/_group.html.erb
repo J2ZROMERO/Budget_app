@@ -1,19 +1,26 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+<div class="content_category_item">
+<%= link_to  group_budgets_url(group_id: group.id), class: "category_content" do %>
+<div id="<%= dom_id group %>" class="item_horizontal">
+<%= image_tag group.icon, size: "100x100" %>
 
-  <p>
-  <strong>Icon:</strong>
-  <%= image_tag group.icon, size: "100x100" %>
+
+<div class="element_index">
+<p>
+   <%= group.name %>
 </p>
-
-  <p>
-    <strong>Total Amount:</strong>
+  
+<p>
+    
     <% @sum = group.budgets.sum {|p| p.amount}  %>
-    <%= @sum %>
+    $ <%= @sum %>
   </p>
-  <%= button_to "Destroy this group", group_path(:id =>  group.id), method: :delete %>
-</div>
+  </div>
+  </div>
+  
+  <%end%>
 
+  <%= button_to group_path(:id =>  group.id), method: :delete, class: "nombre_de_la_clase", style: "background: none; border: none; text-decoration: underline;" do %>
+    <%= image_tag "delete.png", size: "25x25" %>
+    <% end %>
+    
+    </div>

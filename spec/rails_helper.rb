@@ -37,8 +37,14 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{Rails.root}/spec/fixtures"
   config.infer_spec_type_from_file_location!
-  config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
+  
+  config.include Devise::Test::IntegrationHelpers, type: :system
+  config.include Warden::Test::Helpers
+
+  config.before(:each, type: :system) do
+    driven_by :selenium_chrome_headless
+  end
 
   Capybara.javascript_driver = :webkit
   Capybara.app_host = 'http://localhost:3000'

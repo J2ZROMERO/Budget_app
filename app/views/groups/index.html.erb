@@ -1,15 +1,40 @@
+
+<section>
+<header class="header_groups_index">
+<h2>
+</h2>
+<h3 class="categories_title" >  Categories </h3>
+<h1 class="sign_out">  <%= link_to image_tag("of.png", class: "logout") , destroy_user_session_path, method: :delete %> </h1>
+</header>
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
-
-<div id="groups">
+<div class="subtitle">
+<strong>Total Amount:</strong>
+    
+<% sum = 0%>
+<% @groups.each do |group| %>  
+  <% sum += group.budgets.sum {|p| p.amount} %>
+  <% end %>
+  $ <%= sum %>
+  
+  </div>
+  
+  <div id="groups_index">
   <% @groups.each do |group| %>
     <%= render group %>
     <p>
-      <%= link_to "Show this group", group_budgets_url(group_id: group.id) %>
+      
     </p>
   <% end %>
-</div>
+  </div>
+  
+  
+  
+  
+  
+  <%= link_to new_group_path do  %> 
 
+  <%= image_tag "add.png", size: "30x30" %>
+    <% end %>
 
-<%= link_to "New group", new_group_path %>
+  </section>

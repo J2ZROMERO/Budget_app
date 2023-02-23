@@ -3,8 +3,9 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
+    @style = 'budgets/index'
     @budgets = BudgetsGroup.where(group_id: params[:group_id]).order(created_at: :desc)
-    
+    @groups =  Group.all
   end
 
   # GET /budgets/1 or /budgets/1.json
@@ -13,7 +14,10 @@ class BudgetsController < ApplicationController
 
   # GET /budgets/new
   def new
+    @style = 'budgets/new'
     @budget = Budget.new
+    @categories = Group.all
+    @especific_group = params[:group_id]
   end
 
   # GET /budgets/1/edit
@@ -23,10 +27,13 @@ class BudgetsController < ApplicationController
   # POST /budgets or /budgets.json
  def create
     @budget = Budget.new(budget_params.merge(user_id: @current_user.id))
-
+    
     respond_to do |format|
       if @budget.save
-        @budget_group = BudgetsGroup.new( budget_params_group.merge(budget_id: @budget.id))
+        @arraygroups = params[:categories]
+        @arraygroups.each do |e|
+          
+          @budget_group = BudgetsGroup.new(budget_id: @budget.id, group_id: e)
         if @budget_group.save
           format.html { redirect_to group_budgets_path(params[:group_id]), notice: "Budget was successfully created." }
           format.json { render :show, status: :created, location: @budget }
@@ -34,6 +41,12 @@ class BudgetsController < ApplicationController
           format.html { render :new, status: :unprocessable_entity }
           format.json { render json: @budget_group.errors, status: :unprocessable_entity }
         end
+        end
+
+
+
+
+
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @budget.errors, status: :unprocessable_entity }
@@ -74,10 +87,8 @@ class BudgetsController < ApplicationController
     
 
     def budget_params
-      params.require(:budget).permit(:name, :amount,:group_id).slice(:name, :amount)
+      params.require(:budget).permit(:name, :amount,:group_id,:categories).slice(:name, :amount)
     end
     
-    def budget_params_group
-      params.require(:budget).permit(:name, :amount,:group_id).slice(:group_id)
-    end
+    
 end

@@ -21,10 +21,23 @@
     <%= form.text_field :amount %>
   </div>
 
-  <div>
-  <%= form.label :group_id, "Group", style: "display: block" %>
-  <%= form.collection_select :group_id, Group.where(id: params[:group_id]), :id, :name %>
+  <% comparative = @especific_group.to_i %>
+<% @categories.each do |categories| %>
+  <div class="form-check">
+  <% cat = categories.id.to_i %>
+  
+  <% if cat == comparative %>
+
+  <%= check_box_tag "categories[]", categories.id , true %>
+    <%= label_tag "category_#{categories.id}", categories.name %>
+    <% else %>
+    <%= check_box_tag "categories[]", categories.id %>
+    <%= label_tag "category_#{categories.id}", categories.name %>
+    <% end %>
+
   </div>
+<% end %>
+
 
   <div>
     <%= form.submit %>
