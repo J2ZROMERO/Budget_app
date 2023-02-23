@@ -8,6 +8,10 @@ class Users::SessionsController < Devise::SessionsController
     @style = 'login/new'
     super
   end
+def index
+  @style = 'login/index'
+end
+
 
   # POST /resource/sign_in
   # def create

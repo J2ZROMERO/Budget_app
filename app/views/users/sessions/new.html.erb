@@ -7,7 +7,10 @@
 
 
   <header class="header_login">
-  <%= image_tag("back.png", class: 'logo_login') %>
+  
+
+  <%= link_to image_tag("back.png", class: "return_home") ,  root_path %>
+
   <h2 class="login_title">LOGIN</h2>
   <div class="actions_new">
     <%= f.submit "Log in",class: 'boton_login' %>

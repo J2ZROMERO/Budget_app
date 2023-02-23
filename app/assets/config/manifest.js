@@ -3,6 +3,7 @@
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link login/new.css
+//= link login/index.css
 //= link registration/new.css
 //= link password/new.css
 //= link password/edit.css
