@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -25,7 +26,7 @@ display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 .notice{

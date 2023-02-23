@@ -1,30 +1,46 @@
 <section class="section_new">
-<%= image_tag("logo.png", class: 'logo', size: "100x100") %>
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
+
+
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+
+  <header class="header_login">
+  <%= image_tag("back.png", class: 'logo_login') %>
+  <h2 class="login_title">LOGIN</h2>
+  <div class="actions_new">
+    <%= f.submit "Log in",class: 'boton_login' %>
+  </div>
+  </header>
+
+
+
+
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " Email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: " Password"  %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+  
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <p class="notice"><%= notice %></p>
+         
+  
+  
+  
+  <p class="alert"><%= alert %></p>
+  
+  <div class="login_links">
+  <%= render "users/shared/links" %>
   </div>
 <% end %>
-<div class="login_links">
-<%= render "users/shared/links" %>
-</div>
+
+
+
 </section>

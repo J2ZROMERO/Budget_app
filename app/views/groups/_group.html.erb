@@ -1,6 +1,8 @@
 <div class="content_category_item">
-<%= link_to  group_budgets_url(group_id: group.id), class: "category_content" do %>
-<div id="<%= dom_id group %>" class="item_horizontal">
+
+<%= link_to group_budgets_url(group_id: group.id), class: "category_content" do %>
+
+  <div id="<%= dom_id group %>" class="item_horizontal">
 <%= image_tag group.icon, size: "100x100" %>
 
 

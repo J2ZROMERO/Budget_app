@@ -1,1 +1,34 @@
 @import "../application.css";
+
+
+.header_new {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #306aaa;
+}
+
+.logo_new {
+    width: 100%;
+    margin-left: 1%;
+}
+
+.home_page {
+    width: 10%;
+    margin-left: 3%;
+}
+
+.subtitle_new {
+margin-left: 19%;
+}
+
+.form_new {
+    height: 225px;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    align-items: center;
+    margin-top: 6%;
+}
