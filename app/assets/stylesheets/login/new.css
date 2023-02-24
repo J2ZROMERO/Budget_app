@@ -96,3 +96,8 @@ input#user_email {
   color: red;
   margin-top: 3%;
 }
+
+.return_home_link {
+  width: 10%;
+  margin-left: 2%;
+}

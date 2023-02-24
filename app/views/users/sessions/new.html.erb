@@ -9,7 +9,11 @@
   <header class="header_login">
   
 
-  <%= link_to image_tag("back.png", class: "return_home") ,  root_path %>
+  
+  <%= link_to root_path, class: 'return_home_link' do %>
+    <%= image_tag "back.png", class: "return_home" %>
+  <% end %>
+  
 
   <h2 class="login_title">LOGIN</h2>
   <div class="actions_new">

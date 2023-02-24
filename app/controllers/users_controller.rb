@@ -6,13 +6,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-<<<<<<< HEAD
-  def show; end
-=======
-  # GET /users/1 or /users/1.json
-  def show
-  end
->>>>>>> parent of 8796a54 (Add linters files and apply linters)
+
+# GET /users/1 or /users/1.json
+def show; end
 
   # GET /users/new
   def new
@@ -67,8 +63,6 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-<<<<<<< HEAD
-  # Use callbacks to share common setup or constraints between actions.
   def set_user
     @user = User.find(params[:id])
   end
@@ -77,10 +71,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name)
   end
-=======
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:name, :second_name)
-    end
->>>>>>> parent of 8796a54 (Add linters files and apply linters)
+
 end

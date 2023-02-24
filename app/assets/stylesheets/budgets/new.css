@@ -71,4 +71,15 @@ input#budget_amount {
 .select_group {
   color: #7f7f7f;
   margin-bottom: 3%;
+  width: 100%;
+  display: flex;
+}
+
+.form-check {
+  width: 100%;
+  display: flex;
+}
+.form_new_budget {
+  display: flex;
+  flex-wrap: wrap;
 }
