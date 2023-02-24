@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-# Migration to create budgetsgrups groups join table
-
 class CreateBudgetsGroups < ActiveRecord::Migration[7.0]
   def change
     create_table :budgets_groups do |t|

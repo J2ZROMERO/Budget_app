@@ -1,74 +1,69 @@
 @import "../application.css";
-
 .section_budgets_new {
-  width: 348px;
-  max-width: 767px;
-
-  /* display: flex; */
-  justify-content: center;
-
-  /* flex-wrap: wrap; */
-  min-height: 535px;
-  background-color: #f1f3f2;
-  text-align: center;
-}
+    width: 348px;
+    max-width: 767px;
+    /* display: flex; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    min-height: 535px;
+    background-color: #f1f3f2;
+    text-align: center;
+ }
 
 .header_new {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #306aaa;
-  height: 57px;
-  color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #306aaa;
+    height: 57px;
+    color: white;
 }
 
 .logo_new {
-  width: 100%;
-  margin-left: 1%;
+    width: 100%;
+    margin-left: 1%;
 }
 
 .home_page {
-  width: 10%;
-  margin-left: 3%;
+    width: 10%;
+    margin-left: 3%;
 }
 
 .subtitle_new {
-  margin-left: 5%;
+    margin-left: 5%;
 }
 
 .form_new_group {
-  height: 225px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 4%;
-  align-items: center;
+    height: 225px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    align-items: center;
+}
+ .create_budget{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1em;
+}
+ 
+
+input#budget_name, input#budget_amount{
+    width: 346px;
+    height: 46px;
+    background: white;
+    border: 0;
+    border-top: 1px solid #d7d8db;
+    font-weight: 400;
+    border-bottom: 1px solid #d7d8db;
 }
 
-.create_budget {
-  border: none;
-  background: none;
-  color: white;
-  font-size: 1em;
+.logo_budget{
+    width: 25px;
 }
-
-input#budget_name,
-input#budget_amount {
-  width: 346px;
-  height: 46px;
-  background: white;
-  border: 0;
-  border-top: 1px solid #d7d8db;
-  font-weight: 400;
-  border-bottom: 1px solid #d7d8db;
-}
-
-.logo_budget {
-  width: 25px;
-}
-
 .select_group {
-  color: #7f7f7f;
-  margin-bottom: 3%;
+    color: #7f7f7f;
+    margin-bottom: 3%;
 }

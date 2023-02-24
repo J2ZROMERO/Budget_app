@@ -1,5 +1,5 @@
 class BudgetsGroupsController < ApplicationController
-  before_action :set_budgets_group, only: %i[show edit update destroy]
+  before_action :set_budgets_group, only: %i[ show edit update destroy ]
 
   # GET /budgets_groups or /budgets_groups.json
   def index
@@ -7,7 +7,8 @@ class BudgetsGroupsController < ApplicationController
   end
 
   # GET /budgets_groups/1 or /budgets_groups/1.json
-  def show; end
+  def show
+  end
 
   # GET /budgets_groups/new
   def new
@@ -15,7 +16,8 @@ class BudgetsGroupsController < ApplicationController
   end
 
   # GET /budgets_groups/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /budgets_groups or /budgets_groups.json
   def create
@@ -23,7 +25,7 @@ class BudgetsGroupsController < ApplicationController
 
     respond_to do |format|
       if @budgets_group.save
-        format.html { redirect_to budgets_group_url(@budgets_group), notice: 'Budgets group was successfully created.' }
+        format.html { redirect_to budgets_group_url(@budgets_group), notice: "Budgets group was successfully created." }
         format.json { render :show, status: :created, location: @budgets_group }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,7 +38,7 @@ class BudgetsGroupsController < ApplicationController
   def update
     respond_to do |format|
       if @budgets_group.update(budgets_group_params)
-        format.html { redirect_to budgets_group_url(@budgets_group), notice: 'Budgets group was successfully updated.' }
+        format.html { redirect_to budgets_group_url(@budgets_group), notice: "Budgets group was successfully updated." }
         format.json { render :show, status: :ok, location: @budgets_group }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,20 +52,19 @@ class BudgetsGroupsController < ApplicationController
     @budgets_group.destroy
 
     respond_to do |format|
-      format.html { redirect_to budgets_groups_url, notice: 'Budgets group was successfully destroyed.' }
+      format.html { redirect_to budgets_groups_url, notice: "Budgets group was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_budgets_group
+      @budgets_group = BudgetsGroup.find(params[:id])
+    end
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_budgets_group
-    @budgets_group = BudgetsGroup.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def budgets_group_params
-    params.require(:budgets_group).permit(:group_id, :budget_id)
-  end
+    # Only allow a list of trusted parameters through.
+    def budgets_group_params
+      params.require(:budgets_group).permit(:group_id, :budget_id)
+    end
 end

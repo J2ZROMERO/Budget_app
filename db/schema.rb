@@ -41,6 +41,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_20_204347) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+<<<<<<< HEAD
+=======
+    t.string "second_name"
+>>>>>>> parent of 8796a54 (Add linters files and apply linters)
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
