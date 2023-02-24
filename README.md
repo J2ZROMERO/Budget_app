@@ -79,7 +79,7 @@
 
 > You can see the deployment once it is executed in the next link.
 
-- [rails server](https://127.0.0.1:3000/)
+- [Render Live View](https://budget-app-v1.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
