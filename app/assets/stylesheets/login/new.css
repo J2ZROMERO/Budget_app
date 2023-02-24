@@ -16,12 +16,6 @@ body {
   font-family: 'Proxima Nova', sans-serif;
 }
 
-.notice {
-  width: 237px;
-  text-align: center;
-  margin: 0;
-}
-
 .logo {
   margin-top: 8%;
 }
@@ -29,7 +23,6 @@ body {
 p {
   margin: 0;
 }
-
 
 .section_new {
   width: 348px;

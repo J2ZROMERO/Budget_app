@@ -9,6 +9,7 @@ AllCops:
     - "node_modules/**/*"
     - "spec/helpers/*"
     - "app/**/*"
+    - "public/assets/*"
 
   DisplayCopNames: true
 
