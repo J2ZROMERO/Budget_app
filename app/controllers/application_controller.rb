@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     # Define la ruta a la que quieras redirigir al usuario después de iniciar sesión
     # Por ejemplo, si quieres redirigirlo a la ruta raíz de tu aplicación:
-   groups_path
+    groups_path
   end
   private
 

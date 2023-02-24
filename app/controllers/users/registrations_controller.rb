@@ -15,8 +15,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @style = 'registration/new'
 @user = User.new(user_params)
 if @user.save
-    super
+  sign_in @user
+  redirect_to groups_path
 else
+  
   super
 end
   end
