@@ -79,7 +79,7 @@
 
 > You can see the deployment once it is executed in the next link.
 
-- [Render Live View](https://budget-app-v1.onrender.com)
+- [Render Live View](https://budget-app-v1.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
