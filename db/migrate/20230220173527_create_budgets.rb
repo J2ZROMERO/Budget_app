@@ -7,5 +7,6 @@ class CreateBudgets < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    add_index :budgets, :user_id
   end
 end

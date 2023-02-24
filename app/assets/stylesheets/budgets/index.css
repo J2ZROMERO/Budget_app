@@ -1,7 +1,6 @@
 @import "../application.css";
 body {
     flex-direction: column;
-    justify-content: center;
 }
 .section_budget_index {
     width: 348px;
@@ -33,9 +32,6 @@ body {
 width: 30px;
 }
 
-a{
-  width: 15%;  
-}
 
 .submount{ 
     
@@ -69,7 +65,9 @@ a{
     
     height: 55px;
 }
-
+.button_add_budget {
+    
+}
 .transaction_item{
     width: 97%;
     display: flex;
@@ -107,7 +105,4 @@ width: 100%;
 
 .price {
     color: black;
-}
-a{
-    width: 36%;
 }

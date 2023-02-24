@@ -6,5 +6,6 @@ class CreateGroups < ActiveRecord::Migration[7.0]
       t.integer :user_id
       t.timestamps
     end
+    add_index :groups, :user_id
   end
 end
