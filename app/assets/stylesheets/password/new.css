@@ -1,4 +1,13 @@
 @import "../application.css";
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+body,html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 .new_reset {
   width: 348px;
