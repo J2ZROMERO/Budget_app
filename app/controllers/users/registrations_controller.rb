@@ -19,7 +19,6 @@ if @user.save
 else
   super
 end
-
   end
 
     def user_params
