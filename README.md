@@ -260,6 +260,8 @@ Feel free to check the [issues page](https://github.com/J2ZROMERO/Budget_app/iss
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I would like to thanks [Gregorie Vella](https://www.behance.net/gregoirevella) to create the beautiful design and make it public.
+
 I would like to thank MICROVERSE for preparing the content to work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
