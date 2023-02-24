@@ -10,7 +10,6 @@ class User < ApplicationRecord
   has_many :budgets, foreign_key: :author_id
   has_many :groups, foreign_key: :author_id
 
-  validates :name, length: { maximum: 100 }, presence: { message: 'El campo Nombre es obligatorio' }
-  validates :second_name, length: { maximum: 100 },
-                          presence: { message: 'El campo second nombre es obligatorio' }
+  validates :name, length: { maximum: 100 }, presence: true
+  
 end

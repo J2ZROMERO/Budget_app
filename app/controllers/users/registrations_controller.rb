@@ -17,7 +17,7 @@ module Users
     end
 
     def user_params
-      params.require(:user).permit(:name, :second_name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
     # GET /resource/edit
@@ -58,7 +58,6 @@ module Users
 
     # The path used after sign up.
     def after_sign_up_path_for(resource)
-      asdadasds
       super(resource)
     end
 
