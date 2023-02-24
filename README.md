@@ -191,10 +191,23 @@ To run the project, execute the following command:
 
 You can deploy this project using:
 
+- The databa.yml file is configured to be deployed with render, if you want to deploy it locally please.
+  - Change your credentials.
+  - default: &default
+  - adapter: postgresql
+  - encoding: unicode
+  - username: postgres
+  - password: 153624
+  
+- And comment the line 28 in config/puma.rb
+- # workers ENV.fetch("WEB_CONCURRENCY") { 4 }
+  
 > Ruby bin/rails server
 - hen Go to your browser in the next directions to interact with the app.
-- 
+ 
 > http://localhost:3000/ 
+
+> Then if you want to deploy it again in render undo changes you did.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
