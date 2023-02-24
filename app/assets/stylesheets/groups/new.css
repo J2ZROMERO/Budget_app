@@ -22,7 +22,7 @@
 }
 
 .logo_new {
-    width: 100%;
+    width: 30px;
     margin-left: 1%;
 }
 
@@ -32,7 +32,9 @@
 }
 
 .subtitle_new {
+    margin: 0;
     margin-left: 5%;
+    font-size: 1.4em;
 }
 
 .form_new_group {

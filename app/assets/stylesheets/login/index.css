@@ -21,6 +21,7 @@
     font-weight: 400;
     border-bottom: 1px solid #d7d8db;
     color: #b7bcc2;
+    background-color:  #000000;
     
 }
 .login1{
@@ -29,8 +30,8 @@
   
 .logo{
     width: 38%;
-    height: 30%;
-    margin-top: 28%;
+    height: 100px;
+    margin-top: 50%;
 }
 .root_botom a {
     

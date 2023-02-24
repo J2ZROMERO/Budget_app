@@ -1,22 +1,40 @@
-<section>
-<p style="color: green"><%= notice %></p>
-
-<h1>Transactions</h1>
+<section class="section_budget_index">
 
 
-
-<h2>Total Amount </h2><%= @budgets.sum {|p| p.budget.amount}  %>  
-
+<header class="header_new">
 
 
-<div id="budgets">
-<% @budgets.each do |budget| %>
+<%= link_to image_tag("back.png", class: "back_budget") ,  groups_path %>
+<h1 class="subtitle_new">New Transaction</h1>
+<%=  image_tag("search.png", class: "search")  %>
+</header>
+  
+
+
+
+
+<div class="submount">
+ <h2 class="hleft">Total Amount </h2> 
+ <h3 class="hrigth"> $ <%= @budgets.sum {|p| p.budget.amount}  %> </h3>
+ </div>
+
+
+ <% @budgets.each do |budget| %>
+  <div id="budgets">
+  
+  
   <%= render "budget",budget: budget %>
-    <p>
-    <%= budget.budget.amount %>
-    </p>
+    
+
+
+    </div>
   <% end %>
-</div>
-<%= link_to image_tag("c.png", class: "logo", style: "width: 100px;") ,  groups_path %>
-<%= link_to "New budget", new_group_budget_path %>
+  <p style="color: green"><%= notice %></p>
+
+<%= link_to  new_group_budget_path do%>
+  <div class="add_button">
+  <%= image_tag "add.png",  class: 'boton_add'  ,size: "30x30" %>
+  </div>
+  <% end %>
+
 </section>
