@@ -1,4 +1,8 @@
 @import "../application.css";
+body {
+    flex-direction: column;
+    justify-content: center;
+}
 .section_budget_index {
     width: 348px;
     max-width: 767px;
@@ -55,14 +59,14 @@ a{
     text-align: end;
 }
 
-.add_button
+.add_button_budget
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 348px;
     background-color: #26de81;
-    margin-top: 6%;
+    
     height: 55px;
 }
 
@@ -103,4 +107,7 @@ width: 100%;
 
 .price {
     color: black;
+}
+a{
+    width: 36%;
 }

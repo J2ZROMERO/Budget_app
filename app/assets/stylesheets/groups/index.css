@@ -1,5 +1,8 @@
 @import "../application.css";
+body {
+    flex-direction: column;
 
+}
 .section_group_index {
     width: 348px;
     max-width: 767px;
@@ -100,8 +103,7 @@ color: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 348px;
     background-color: #26de81;
-    margin-top: 6%;
     height: 55px;
 }
