@@ -7,7 +7,7 @@ class BudgetsController < ApplicationController
     @budgets = BudgetsGroup.where(group_id: params[:group_id]).order(created_at: :desc)
     @groups =  Group.all
   end
-
+aaaaa
   # GET /budgets/1 or /budgets/1.json
   def show; end
 
