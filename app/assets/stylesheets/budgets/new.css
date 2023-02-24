@@ -79,6 +79,7 @@ input#budget_amount {
   width: 100%;
   display: flex;
 }
+
 .form_new_budget {
   display: flex;
   flex-wrap: wrap;
