@@ -1,0 +1,25 @@
+
+<section class="section_group_index">
+<header class="header_groups_index">
+
+<h3 class="categories_title" >Categories</h3>
+<h1 class="sign_out">  <%= link_to image_tag("of.png", class: "logout") , destroy_user_session_path, method: :delete %> </h1>
+</header>
+<p style="color: green"><%= notice %></p>
+
+  <div id="groups_index">
+  <% @groups.each do |group| %>
+    <%= render group %>
+    <p>
+      
+    </p>
+  <% end %>
+  </div>
+
+  </section>
+  <%= link_to new_group_path do  %> 
+    <div class="add_button">
+    <%= image_tag "add.png",  class: 'boton_add'  ,size: "30x30" %>
+    </div>
+    <% end %>
+    

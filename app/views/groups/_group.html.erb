@@ -1,0 +1,28 @@
+<div class="content_category_item">
+
+<%= link_to group_budgets_url(group_id: group.id), class: "category_content" do %>
+
+  <div  class="item_horizontal">
+<%= image_tag group.icon, class: 'items_category' %>
+
+
+<div class="element_index">
+<p>
+   <%= group.name %>
+</p>
+  
+<p>
+    
+    <% @sum = group.budgets.sum {|p| p.amount}  %>
+    $ <%= @sum %>
+  </p>
+  </div>
+  </div>
+  
+  <%end%>
+
+  <%= button_to group_path(:id =>  group.id), method: :delete, class: "nombre_de_la_clase", style: "background: none; border: none; text-decoration: underline;" do %>
+    <%= image_tag "delete.png", size: "25x25"  %>
+    <% end %>
+    
+    </div>

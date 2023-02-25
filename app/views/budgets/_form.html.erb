@@ -1,0 +1,58 @@
+  <%= form_with(model: Budget.new, url: group_budgets_path(params[:group_id]), method: :post, class: 'form_new_budget') do |form| %>
+
+  
+  <header class="header_new">
+  <%= link_to image_tag("back.png", class: "logo_budget") , group_budgets_path(:group_id => params[:group_id]), class: 'home_page'%>
+  
+
+  <h1 class="subtitle_new">New Transaction</h1>
+  
+  <div>
+    <%= form.submit "Create", class: 'create_budget' %>
+  </div>
+  </header>
+  
+  <% if budget.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
+
+      <ul>
+        <% budget.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    
+    <%= form.text_field :name , placeholder: '    Name'%>
+  </div>
+
+  <div>
+    
+    <%= form.text_field :amount, placeholder: '    $ 12.00' %>
+  </div>
+<h2 class="select_group">Select Groups</h2>
+  <% comparative = @especific_group.to_i %>
+<% @categories.each do |categories| %>
+  
+  <div class="form-check">
+  
+  <% cat = categories.id.to_i %>
+  
+  <% if cat == comparative %>
+
+  <%= check_box_tag "categories[]", categories.id , true %>
+    <%= label_tag "category_#{categories.id}", categories.name %>
+    <% else %>
+    <%= check_box_tag "categories[]", categories.id %>
+    <%= label_tag "category_#{categories.id}", categories.name %>
+    <% end %>
+
+  </div>
+<% end %>
+
+
+  
+<% end %>

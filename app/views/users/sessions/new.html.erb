@@ -1,0 +1,56 @@
+<section class="section_new">
+
+
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form_new_login"}) do |f| %>
+
+
+  <header class="header_login">
+  
+
+  
+  <%= link_to root_path, class: 'return_home_link' do %>
+    <%= image_tag "back.png", class: "return_home" %>
+  <% end %>
+  
+
+  <h2 class="login_title">LOGIN</h2>
+  <div class="actions_new">
+    <%= f.submit "Log in",class: 'boton_login' %>
+  </div>
+  </header>
+
+
+
+
+  <div class="field">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " Email" %>
+  </div>
+
+  <div class="field">
+    
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: " Password"  %>
+  </div>
+
+  
+
+  <% if notice.present? %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<% if alert.present? %>
+  <p class="alert"><%= alert %></p>
+<% end %>
+
+
+
+  <div class="login_links">
+  <%= render "users/shared/links_login" %>
+  </div>
+<% end %>
+
+
+
+</section>

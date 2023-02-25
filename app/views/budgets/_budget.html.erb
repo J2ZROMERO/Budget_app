@@ -1,0 +1,27 @@
+<div class="transaction_item">
+  
+<div class="subtitle_head">
+ <p>
+    <%= budget.budget.name %>
+  </p>
+  <p class="price">
+   $ <%= budget.budget.amount %>
+  </p>
+  </div>
+
+  
+  <div class="button_date">
+  <p>
+    <%= budget.budget.created_at.strftime("%y-%m-%d") %>
+  </p>
+  
+  
+  <%= button_to  group_budget_path(params[:group_id],:id => budget.budget.id), method: :delete, class: "nombre_de_la_clase", style: "background: none; border: none; text-decoration: underline;" do %>
+  
+    <%= image_tag "delete.png", size: "18x18"  %>
+    <% end %>
+
+
+</div>
+  </div>
+  

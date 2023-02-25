@@ -1,0 +1,136 @@
+@import "../application.css";
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice {
+  width: 237px;
+  text-align: center;
+  margin: 0;
+}
+
+.logo {
+  margin-top: 8%;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.section_group_index {
+  width: 348px;
+  max-width: 767px;
+
+  /* display: flex; */
+  justify-content: center;
+
+  /* flex-wrap: wrap; */
+  min-height: 535px;
+  background-color: #f1f3f2;
+  text-align: center;
+}
+
+.header_groups_index {
+  background-color: #306aaa;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 57px;
+}
+
+.logout {
+  width: 100%;
+}
+
+.sign_out {
+  width: 10%;
+  margin: 0;
+  margin-right: 2%;
+}
+
+.categories_title {
+  margin-right: 25%;
+  color: white;
+}
+
+.subtitle {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  margin-bottom: 3%;
+  justify-content: space-around;
+}
+
+#groups_index {
+  width: 100%;
+  display: flex;
+
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.item_horizontal {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  align-items: center;
+}
+
+.content_category_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  height: 80px;
+  margin: 3% 0 0% 0;
+}
+
+.category_content {
+  width: 100%;
+}
+
+.content_category_item > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.element_index {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.items_category {
+  width: 80px;
+  height: 80px;
+}
+
+.add_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 348px;
+  background-color: #26de81;
+  height: 55px;
+}

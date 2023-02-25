@@ -1,0 +1,42 @@
+<section class="new_register">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form_new_user"}) do |f| %>
+
+  
+  <header class="header_login">
+  
+
+  <%= link_to image_tag("back.png", class: "return_home") ,  root_path %>
+
+  <h2 class="login_title">REGISTER</h2>
+  <div class="actions_new">
+    <%= f.submit "Next",class: 'button_next' %>
+  </div>
+  </header>
+
+
+  <div class="field">
+
+  <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: '    Name' %>
+  </div>
+  
+  
+  <div class="field">
+  <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: '    Email' %>
+  </div>
+  
+  <div class="field">
+
+  <%= f.password_field :password, autocomplete: "new-password", placeholder: '    Password - 6 characters minimum' %>
+  </div>
+  
+  <div class="field">
+  
+  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '    Password Confirm' %>
+  </div>
+  
+  
+<% end %>
+
+<%= render "users/shared/error_messages", resource: resource %>
+
+</section>

@@ -1,0 +1,36 @@
+<%= form_with(model: group, class: 'form_new_group') do |form| %>
+  <header class="header_new">
+
+<%= link_to image_tag("back.png", class: "logo_new") ,  groups_path , class: 'home_page'%>
+
+<h1 class="subtitle_new">New category</h1>
+
+<div>
+    <%= form.submit "Create", class: 'create_category'%>
+  </div>
+</header>
+  
+
+
+    <%= form.text_field :name, placeholder: '    Name' %>
+  
+
+  
+    
+    <%= form.text_field :icon , placeholder: '    IMAGE URL "http//:image.png"'%>
+  
+  
+<% end %>
+
+<% if group.errors.any? %>
+<div style="color: red">
+  <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+  <ul>
+    <% group.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
